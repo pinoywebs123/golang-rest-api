@@ -53,3 +53,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	DB.Create(&user)
 	json.NewEncoder(w).Encode(user)
 }
+
+func GetIndex(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("Hello Morley")
+}

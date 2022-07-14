@@ -10,6 +10,7 @@ import (
 func initializeRouter() {
 	r := mux.NewRouter()
 
+	r.HandleFunc("/", GetIndex).Methods("GET")
 	r.HandleFunc("/users", GetUsers).Methods("GET")
 	r.HandleFunc("/user/{id}", GetUser).Methods("GET")
 	r.HandleFunc("/users", CreateUser).Methods("POST")
